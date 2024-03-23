@@ -59,14 +59,22 @@
             }
         </script>
     </head>
-    <body>
-        <h1>Random Quote</h1> 
-        <div id="wrapper">
-            <div id="quote-box"></div>
-            <div class="quote-tex"  id="text" style="opacity: 1;"></div>
-            <div class="quote-author" id="author"></div>
-            <button id="new-quote" onClick="generateQuote()"; class ="btn btn-success">New Quote</button>
-            <a href="twitter.com/intent/tweet" src="#" id="tweet-quote" class="btn btn-primary" target="_blank" > <i class="fa fa-twitter"></i><strong>X</strong></a>
+    <body> 
+        <div class="container">
+            <wrapper id="quote-box">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <div id="text"></div>
+                        </h5>
+                        <p class="card-text text-center">
+                            <div id="author"></div>
+                        </p>
+                        <button id="new-quote" onClick="generateQuote()"; class ="btn btn-success">New Quote</button>
+                        <a href="twitter.com/intent/tweet" src="#" id="tweet-quote" class="btn btn-primary" target="_blank" > <i class="fa fa-twitter"></i><strong>X</strong></a>
+                    </div>
+                </div>
+            </wrapper>    
         </div>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </body>
