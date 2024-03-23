@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="eng">
+    <head>
+        <meta charset ="utf-8">
+        <meta name ="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <title>RANDOM QUOTE MANCHINE</title>
+        <script>
+            const QUOTEBANK = [
+                {
+                    quote: "Music doesn't lie. If there is something to be changed in this world, then it can only happen through music.",
+                    author: "- Jimi Hendrix"
+                },
+                {
+                    quote: "You build on failure. You use it as a stepping stone. Close the door on the past. You don't try to forget the mistakes, but you don't dwell on it. You don't let it have any of your energy, or any of your time, or any of your space.",
+                    author: "- Johny Cash"
+                },
+                {
+                    quote: "You must be the change you wish to see in the world.",
+                    author: "- Mahatma Ghandi"
+                },
+                {
+                    quote: "The only thing we have to fear is fear itself.",
+                    author: "- Franklin D. Roosevelt"
+                },
+                {
+                    quote: "Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that",
+                    author: "- Martin Luther King Jr"
+                },
+                {
+                    quote: "Do one thing every day that scares you.",
+                    author: "- Eleanor Roosevelt"
+                },
+                {
+                    quote: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+                    author: "- Helen Keller"
+                },
+                {
+                    quote: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+                    author:"- Albert Einstein"
+                },
+                {
+                    quote: "I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.",
+                    author: "- Marilyn Monroe"
+                }
+            ]
+            window.onload = init;
+            function init() {
+                generateQuote()
+            }
+            function generateQuote() {
+                let quoteSize = QUOTEBANK.length;
+                let randomIndex = Math.floor(Math.random() * quoteSize);
+                let randomQuoteData = QUOTEBANK[randomIndex];
+
+                document.getElementById("text").innerText = randomQuoteData.quote;
+                document.getElementById("author").innerText = randomQuoteData.author;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Random Quote</h1> 
+        <div id="wrapper">
+            <div id="quote-box"></div>
+            <div class="quote-tex"  id="text" style="opacity: 1;"></div>
+            <div class="quote-author" id="author"></div>
+            <button id="new-quote" onClick="generateQuote()"; class ="btn btn-success">New Quote</button>
+            <a class="button" href="twitter.com/intent/tweet" src="#" id="tweet-quote" class="btn btn-primary" target="_blank" > <i class="fa fa-twitter"></i><strong>X</strong></a>
+        </div>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
